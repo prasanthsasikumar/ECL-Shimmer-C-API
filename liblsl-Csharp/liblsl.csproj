@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Authors>Christian Kothe</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>LSL</RootNamespace>
+    <Product>Labstreaminglayer C# bindings</Product>
+    <Version>2.0</Version>
+    <DefaultItemExcludes>$(DefaultItemExcludes);examples/**</DefaultItemExcludes>
+    <AssemblyName>lsl_csharp</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="lsl.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lsl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
+
