@@ -65,9 +65,12 @@ namespace ShimmerAPI
         private void lnklblShimmerSite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Navigate to a URL.
-            System.Diagnostics.Process.Start("http://www.shimmersensing.com");
+            System.Diagnostics.Process.Start("http://empathiccomputing.org/");
         }
 
+        private void lblCopyright_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

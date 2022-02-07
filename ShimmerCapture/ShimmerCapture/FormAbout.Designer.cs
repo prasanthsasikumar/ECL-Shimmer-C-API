@@ -76,10 +76,10 @@
             this.lnklblShimmerSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnklblShimmerSite.Location = new System.Drawing.Point(97, 211);
             this.lnklblShimmerSite.Name = "lnklblShimmerSite";
-            this.lnklblShimmerSite.Size = new System.Drawing.Size(207, 17);
+            this.lnklblShimmerSite.Size = new System.Drawing.Size(195, 17);
             this.lnklblShimmerSite.TabIndex = 2;
             this.lnklblShimmerSite.TabStop = true;
-            this.lnklblShimmerSite.Text = "http://www.shimmersensing.com";
+            this.lnklblShimmerSite.Text = "http://empathiccomputing.org/";
             this.lnklblShimmerSite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblShimmerSite_LinkClicked);
             // 
             // lblCopyright
@@ -89,9 +89,10 @@
             this.lblCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCopyright.Location = new System.Drawing.Point(60, 189);
             this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Size = new System.Drawing.Size(256, 17);
+            this.lblCopyright.Size = new System.Drawing.Size(265, 17);
             this.lblCopyright.TabIndex = 3;
-            this.lblCopyright.Text = "Copyright 2014 Shimmer Research Ltd.";
+            this.lblCopyright.Text = "Copyright 2022 Empathic Computing Lab";
+            this.lblCopyright.Click += new System.EventHandler(this.lblCopyright_Click);
             // 
             // lblApplicationTitle
             // 

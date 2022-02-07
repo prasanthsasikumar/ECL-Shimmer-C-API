@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ShimmerAPI</RootNamespace>
-    <AssemblyName>ShimmerCapture v0.7</AssemblyName>
+    <AssemblyName>ECL ShimmerCapture v0.4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -95,6 +95,9 @@
   <ItemGroup>
     <Reference Include="ExceptionReporter.WinForms">
       <HintPath>libs\ExceptionReporter.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="lsl_csharp">
+      <HintPath>..\..\..\Shimmer\liblsl-Csharp\bin\Debug\netstandard2.0\lsl_csharp.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>..\..\ShimmerAPI\packages\MathNet.Numerics.3.20.0\lib\net40\MathNet.Numerics.dll</HintPath>
@@ -290,6 +293,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\liblsl-Csharp\liblsl.csproj">
+      <Project>{f7f5a129-6641-407c-a34f-18279ee23c1a}</Project>
+      <Name>liblsl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ShimmerAPI\ShimmerAPI\ShimmerAPI.csproj">
       <Project>{6e320423-1d88-47ee-97ba-51113e538d33}</Project>
       <Name>ShimmerAPI</Name>

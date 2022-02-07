@@ -12,6 +12,7 @@ using System.IO.Ports;
 using ZedGraph;
 using ShimmerAPI;
 using ShimmerLibrary;
+using LSL;
 using static ShimmerLibrary.ECGToHRAdaptive;
 //using ExceptionReporting;   // For ExceptionReporting
 
@@ -73,6 +74,10 @@ namespace ShimmerAPI
         //public string status_text = "";
         private Configuration Configure;
         private Logging WriteToFile;
+        private StreamInfo info;
+        private StreamOutlet outlet;
+        private int heartRateLSL = 0;
+        private bool LSLInitialized = false;
         private Orientation3D Orientation3DForm;
         private System.IO.Ports.SerialPort SerialPort = new SerialPort();
         private string ComPort;
@@ -1711,6 +1716,7 @@ namespace ShimmerAPI
                             formats.Add("");
                             units.Add("Beats/min");
                             data.Add(heartRate);
+                            heartRateLSL = heartRate;
                             //add inter beat interval
                             names.Add("IBI PPG");
                             formats.Add("");
@@ -2512,6 +2518,24 @@ namespace ShimmerAPI
                         UpdateChannelTextBoxes(data);
                     }
 
+                    //LSL Stream
+                    if (ToolStripMenuItemStreamLSL.Checked)
+                    {
+                        if (!LSLInitialized)
+                        {
+                            info = new StreamInfo(toolStripTextBox3.Text, toolStripTextBox1.Text, objectCluster.GetData().Count, Double.Parse(toolStripTextBox2.Text), channel_format_t.cf_float32, "sddsfsdf");
+                            outlet = new StreamOutlet(info);
+                            LSLInitialized = true;
+                        }
+
+                        float[] streamLSLData = new float[objectCluster.GetData().Count];
+                        for(int i=0; i<objectCluster.GetData().Count; i++)
+                        {
+                            streamLSLData[i] = (float)objectCluster.GetData(i).Data;
+                        }
+                        outlet.push_sample(streamLSLData);
+                    }
+
                     //Write to file
                     if (WriteToFile != null && ToolStripMenuItemSaveToCSV.Checked != false)
                     {
@@ -2824,6 +2848,19 @@ namespace ShimmerAPI
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItemStreamLSL_Click(object sender, EventArgs e)
+        {     
+            if (ToolStripMenuItemStreamLSL.Checked)
+            {
+                ToolStripMenuItemStreamLSL.Checked = false;
+                //stop the stream
+            }
+            else
+            {
+                ToolStripMenuItemStreamLSL.Checked = true;
+            }            
         }
     }
 
