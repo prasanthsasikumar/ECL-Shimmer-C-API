@@ -3,6 +3,8 @@
 
 
 
+[![N|Solid](https://github.com/prasanthsasikumar/ECL-Shimmer-C-API/blob/master/Resources/config.png)](http://empathiccomputing.org/)
+
 # Shimmer C# API
 
 The Shimmer C# API is used to control and stream data from both a Verisense Device and a Shimmer3 Bluetooth Device running LogAndStream firmware. 
