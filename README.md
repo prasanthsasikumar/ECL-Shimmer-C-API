@@ -10,7 +10,7 @@ Shimmer GUI application to collect sensor data and stream it to other applicatio
 
 [![N|Solid](https://github.com/prasanthsasikumar/ECL-Shimmer-C-API/blob/master/Resources/LSL.png)](http://empathiccomputing.org/)
 
-
+Working Video : 
 
 The Shimmer C# API is used to control and stream data from both a Verisense Device and a Shimmer3 Bluetooth Device running LogAndStream firmware. 
 
