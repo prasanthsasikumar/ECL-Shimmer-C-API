@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: ECL-Shimmer-C-API
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - email: prasanth.sasikumar.psk@gmail.com
+    given-names: Prasanth
+    family-names: Sasikumar
+    affiliation: University of Auckland
+    orcid: 'https://orcid.org/0000-0002-5844-9164'
+repository-code: 'https://github.com/prasanthsasikumar/ECL-Shimmer-C-API'
+url: 'https://www.prasanthsasikumar.com/'
+abstract: >-
+  The Shimmer LSL Streaming Plugin is a program that was
+  written for the purpose of collecting and streaming
+  physiological data, such as Galvanic Skin Response (GSR)
+  and Heart Rate, from a Shimmer 3 device to Unity, a
+  popular game engine and platform for creating virtual
+  environments. The program was designed to facilitate the
+  use of physiological data in collaborative virtual
+  environments created using Unity by utilizing the Lab
+  Streaming Layer (LSL) protocol for data streaming.
+license: MIT
